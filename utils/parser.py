@@ -6,7 +6,7 @@ def read_nml(file_path):
         with open(file_path) as f:
             content = [l.strip() for l in f]
     except FileNotFoundError:
-        raise Exception('File not found in path.')
+        raise Exception('File not found in path ' + file_path)
     
     # We need to strip the namespace and file ending \ marker
     # So remove first and last item from content
